@@ -178,6 +178,12 @@ body {
   .card {
     zoom: 175%;
   }
+  .card-header {
+    zoom: 110%;
+  }
+  .card-main {
+    zoom: 110%;
+  }
 }
 
 .card-social {
