@@ -210,6 +210,17 @@ a {
   color: #000;
   transition: .3s ease; }
 
+.nav-link svg{
+  fill: #f15e75;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 6px;
+}
+
+.nav-link svg:hover{
+  fill: #D05165;
+}
+
 .navbar-nav:hover li a {
   opacity: 0.5; }
   .navbar-nav:hover li a:hover {
