@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="vendor/font/icon-font.min.css">
     <link href="vendor/font/icons.css" rel="stylesheet">
 
+    <!-- Slide Image -->
+    <link rel="stylesheet" href="css/slideimage.css">
 </head>
 <body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
 	<div class="boxed-page">
@@ -142,15 +144,15 @@
 </section>
 <!-- Portfolio Section -->
 <section id="gtco-portfolio" class="bg-white">
-    <div class="container">
-        <div class="section-content">
+    <div class="container" style="background-color: black;">
+        <div class="p-0 section-content">
             <!-- Section Title -->
             <!-- <div class="title-wrap">
                 <h2 class="section-title"><b>Ý nghĩa</b></h2>
                 <p class="section-sub-title">Nâng cao yếu tố thẩm mỹ của đám cưới. <br> Cường điệu môi trường xung quanh bức ảnh đính hôn. <br> Những bức ảnh này thường được trưng bày tại chính đám cưới hoặc tại nhà của cặp đôi.</p>
             </div> -->
             <!-- End of Section Title -->
-            <div class="row">
+            <div class="row" style="display: none;">
                 <!-- Portfolio Holder -->
                 <div class="col-md-12">
                     <!-- Portfolio Content -->
@@ -230,7 +232,7 @@
                         </div>
                         <!-- End of Portfolio Item -->
                         <!-- Portfolio Item -->
-                        <div class="grid-item creative">
+                        <div class="grid-item">
                             <div class="grid-item-wrapper">
                                 <img src="img/photojournalism/p4.jpg" alt="portfolio-img" class="portfolio-item">
                                 <div class="grid-info">
@@ -251,6 +253,10 @@
                     <!-- End of Portfolio Content -->
                 </div>
                 <!-- End of Portfolio Holder -->
+            </div>
+            <div class="row">
+                <!-- partial:index.partial.html -->
+                <div id="slideimage" style="height: 60vmin;"></div>
             </div>
         </div>
     </div>
@@ -286,5 +292,11 @@
 	<script src="vendor/lightcase/lightcase.js"></script>
     <!-- Main JS -->
 	<script src="js/app.min.js "></script>
+
+    <!-- Slide Image -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.production.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/react-transition-group/4.2.1/react-transition-group.min.js'></script>
+    <script  src="./js/slideimage.js"></script>
 </body>
 </html>
