@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700|IBM+Plex+Sans:500&display=swap");
-/* @import url(./fontibm.css); */
+@import url(./fontibm.css);
 :root {
   --color-primary: #6B7A8F;
   --color-secondary: #101118;
@@ -31,6 +30,12 @@ body {
           justify-content: center;
   overflow-x: hidden;
   width: 100%;
+  height: 60vmin;
+  margin-top: 1.5rem;
+}
+
+.container-slide {
+  background-color: black;
 }
 
 h1, h2, h3 {
@@ -80,6 +85,7 @@ h1, h2, h3 {
   position: absolute;
   top: calc(100% + 1rem);
   width: 115%;
+  margin-top: 2%;
 }
 .slider__controls .btn {
   --size: 3rem;
@@ -95,7 +101,17 @@ h1, h2, h3 {
   width: var(--size);
 }
 .slide__action {
-    display: none;
+  border-radius: 5px;
+}
+@media (max-width: 1000px) {
+  .slide__action {
+    padding: 6px;
+    margin-top: 9.5rem !important;
+    color: red;
+  }
+}
+.slide__action:hover {
+  color: #f15e75 !important;
 }
 .slider__controls .btn:focus {
   border-color: var(--color-focus);
@@ -207,8 +223,8 @@ h1, h2, h3 {
   --d: 20;
   height: 110%;
   left: -5%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -260,7 +276,7 @@ h1, h2, h3 {
   }
 }
 .slide__content > * + * {
-  margin-top: 2rem;
+  margin-top: 20rem;
 }
 
 @-webkit-keyframes fade-in {

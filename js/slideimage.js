@@ -1,32 +1,6 @@
-const slideData = [
-    {
-      index: 0,
-    //   headline: 'New Fashion Apparel',
-    //   button: 'Shop now',
-      src: "./img/photojournalism/p3.jpg" },
-
-    {
-      index: 1,
-    //   headline: 'In The Wilderness',
-    //   button: 'Book travel',
-    src: "./img/photojournalism/p4.jpg" },
-    
-    {
-      index: 2,
-    //   headline: 'For Your Current Mood',
-    //   button: 'Listen',
-    src: "./img/photojournalism/p5.jpg" },
-    
-    {
-      index: 3,
-    //   headline: 'Focus On The Writing',
-    //   button: 'Get Focused',
-    src: "./img/photojournalism/p6.jpg" }];
-    
     // =========================
     // Slide
     // =========================
-    
     class Slide extends React.Component {
       constructor(props) {
         super(props);
@@ -67,30 +41,45 @@ const slideData = [
         if (current === index) classNames += ' slide--current';else
         if (current - 1 === index) classNames += ' slide--previous';else
         if (current + 1 === index) classNames += ' slide--next';
-    
-        return (
-          React.createElement("li", {
-            ref: this.slide,
-            className: classNames,
-            onClick: this.handleSlideClick,
-            onMouseMove: this.handleMouseMove,
-            onMouseLeave: this.handleMouseLeave },
-    
-          React.createElement("div", { className: "slide__image-wrapper" },
-          React.createElement("img", {
-            className: "slide__image",
-            alt: headline,
-            src: src,
-            onLoad: this.imageLoaded })),
-    
-    
-    
-          React.createElement("article", { className: "slide__content" },
-          React.createElement("h2", { className: "slide__headline" }, headline),
-          React.createElement("button", { className: "slide__action btn" }, button))));
-    
-    
-    
+        
+        if (headline != undefined) {
+          return (
+            React.createElement("li", {
+              ref: this.slide,
+              className: classNames,
+              onClick: this.handleSlideClick,
+              onMouseMove: this.handleMouseMove,
+              onMouseLeave: this.handleMouseLeave },
+      
+            React.createElement("div", { className: "slide__image-wrapper" },
+            React.createElement("img", {
+              className: "slide__image",
+              alt: headline,
+              src: src,
+              onLoad: this.imageLoaded })),
+      
+      
+      
+            React.createElement("article", { className: "slide__content" },
+            React.createElement("h2", { className: "slide__headline" }, headline),
+            React.createElement("a", { className: "slide__action btn", href: "https://www.behance.net/khangvu5" }, button)
+            )));
+        } else {
+          return (
+            React.createElement("li", {
+              ref: this.slide,
+              className: classNames,
+              onClick: this.handleSlideClick,
+              onMouseMove: this.handleMouseMove,
+              onMouseLeave: this.handleMouseLeave },
+      
+            React.createElement("div", { className: "slide__image-wrapper" },
+            React.createElement("img", {
+              className: "slide__image",
+              alt: headline,
+              src: src,
+              onLoad: this.imageLoaded })),));
+        }
       }}
     
     
@@ -188,12 +177,5 @@ const slideData = [
             type: "next",
             title: "Go to next slide",
             handleClick: this.handleNextClick }))));
-    
-    
-    
-    
       }}
     
-    
-    
-    ReactDOM.render(React.createElement(Slider, { heading: "Example Slider", slides: slideData }), document.getElementById('slideimage'));
