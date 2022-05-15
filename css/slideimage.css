@@ -107,6 +107,7 @@ h1, h2, h3 {
   .slide__action {
     padding: 6px;
     margin-top: 9.5rem !important;
+    font-size: xx-small;
   }
 }
 .slide__action:hover {
