@@ -107,7 +107,6 @@ h1, h2, h3 {
   .slide__action {
     padding: 6px;
     margin-top: 9.5rem !important;
-    color: red;
   }
 }
 .slide__action:hover {
